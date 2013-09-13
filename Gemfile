@@ -1,3 +1,3 @@
 source 'https://rubygems.org'
 
-gem 'chefspec', '~> 2.0.1'
+gem 'chefspec', github: 'acrmp/chefspec'
