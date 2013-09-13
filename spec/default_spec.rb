@@ -5,9 +5,10 @@ describe 'bacon::default' do
     ChefSpec::ChefRunner.new(platform: 'ubuntu', version: '12.04').converge('bacon::default')
   end
 
-  it 'creates the foo user' do
-    expect(chef_run).to create_user('foo').with(system: true)
-  end
+  # This requires ChefSpec 2.1.0+
+  # it 'creates the foo user' do
+  #   expect(chef_run).to create_user('foo').with(system: true)
+  # end
 
   it 'creates the foo user (alternative test)' do
     user = chef_run.user('foo')
@@ -15,9 +16,10 @@ describe 'bacon::default' do
     expect(user.system).to be_true
   end
 
-  it 'creates the foo group' do
-    expect(chef_run).to create_group('logstash').with(system: true)
-  end
+  # This requires ChefSpec 2.1.0+
+  # it 'creates the foo group' do
+  #   expect(chef_run).to create_group('logstash').with(system: true)
+  # end
 
   it 'creates the logstash group (alternative test)' do
     group = chef_run.group('logstash')
